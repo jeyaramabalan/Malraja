@@ -16,35 +16,87 @@ class ReturnController extends Controller
 {
     public function index(Request $request)
     {
-        $orders = OrderModel::where('status', 5)->where('return_status', 1)->get();
-        $orderData = [];
-        foreach($orders as $order) {
-            $orderDetails = OrderDetailModel::select(
-                'order_details.quantity', 
-                'order_details.order_id', 
-                'order_details.product_id', 
-                'order_details.quantity_price', 
-                'order_details.amount', 
-                'order_details.gst', 
-                'category.name as category_name', 
-                'products.name as product_name', 
-                'order_details.tax')
-                ->leftjoin('category', 'order_details.category_id', '=', 'category.id')
-                ->leftjoin('products', 'order_details.product_id', '=', 'products.id')
-                ->where('order_id', $order->id)
-                ->where('order_details.status', 2)
-                ->limit(5);
-            foreach($orderDetails as $orderDetail) {
-                if($orderDetail['status'] != 1) {
-                    $orderDetail['quantity'] = $this->getReturnQuantity($orderDetail['order_id'], $orderDetail['product_id']);
-                }
-                $orderData[] = $orderDetail;
+        $this->datas['route'] = route('return.create');
+        return view('return.orders')->with($this->datas);
+    }
+
+    public function getReturnList(Request $request)
+    {
+        $query = ReturnModel::select(
+            'return_products.id',
+            'return_products.bill_id',
+            'return_products.order_id',
+            'return_products.quantity',
+            'return_products.amount',
+            'return_products.tax',
+            'return_products.created_at',
+            'products.name as product_name',
+            'customer.name as customerName',
+            'order.date as order_date'
+        )
+            ->leftJoin('order', 'return_products.order_id', '=', 'order.id')
+            ->leftJoin('customer', 'order.customer_id', '=', 'customer.id')
+            ->leftJoin('products', 'return_products.product_id', '=', 'products.id');
+
+        $orderColumns = [
+            1 => 'return_products.bill_id',
+            3 => 'customer.name',
+            4 => 'products.name',
+            5 => 'return_products.created_at',
+            6 => 'return_products.quantity',
+            7 => 'return_products.amount',
+            8 => 'return_products.tax',
+        ];
+
+        if ($request->has('order') && isset($request->order[0]['column'])) {
+            $colIndex = (int) $request->order[0]['column'];
+            $dir = ($request->order[0]['dir'] ?? 'desc') === 'asc' ? 'asc' : 'desc';
+            if (isset($orderColumns[$colIndex])) {
+                $query->orderBy($orderColumns[$colIndex], $dir);
             }
         }
-        
-        $this->datas['data'] = $orderData;
-        $this->datas['route'] = route("return.create");
-        return view('return.orders')->with($this->datas);
+
+        $query->orderBy('return_products.id', 'desc');
+
+        if (isset($request->search) && isset($request->search['value']) && $request->search['value'] != '') {
+            $search = $request->search['value'];
+            $query->where(function ($q) use ($search) {
+                $q->where('return_products.bill_id', 'like', '%'.$search.'%')
+                    ->orWhere('return_products.order_id', 'like', '%'.$search.'%')
+                    ->orWhere('customer.name', 'like', '%'.$search.'%')
+                    ->orWhere('products.name', 'like', '%'.$search.'%');
+            });
+        }
+
+        $datasCount = (clone $query)->count();
+
+        $limit = (int) $request->input('length', 25);
+        $offset = (int) $request->input('start', 0);
+        if ($limit <= 0) {
+            $limit = max($datasCount, 1);
+        }
+
+        $rows = $query->offset($offset)->limit($limit)->get();
+        $datalist = [];
+        $i = $offset;
+        foreach ($rows as $list) {
+            $list->sno = ++$i . '';
+            $list->date = $list->created_at
+                ? date('Y-m-d', strtotime($list->created_at))
+                : ($list->order_date ?? '');
+            $list->order_no = '<a href="'.route('order-show', [$list->order_id]).'">#'.$list->order_id.'</a>';
+            $list->action = '<td align="center">
+                <a href="'.route('order-show', [$list->order_id]).'"><i class="fa fa-eye"></i></a>
+            </td>';
+            $datalist[] = $list;
+        }
+
+        return response()->json([
+            'draw' => (int) $request->input('draw'),
+            'recordsTotal' => (int) $datasCount,
+            'recordsFiltered' => (int) $datasCount,
+            'data' => $datalist,
+        ]);
     }
 
     public function getReturnQuantity($id, $product_id)

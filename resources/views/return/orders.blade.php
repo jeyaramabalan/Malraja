@@ -31,11 +31,14 @@
                                 <tr>
                                     <th>{{ __('returns.s_no') }}</th>
                                     <th>{{ __('returns.bill_no') }}</th>
+                                    <th>{{ __('returns.order_no') }}</th>
+                                    <th>{{ __('returns.customer') }}</th>
                                     <th>{{ __('returns.product_name') }}</th>
                                     <th>{{ __('returns.date') }}</th>
                                     <th>{{ __('returns.quantity') }}</th>
                                     <th>{{ __('returns.total') }}</th>
                                     <th>{{ __('returns.tax') }}</th>
+                                    <th>{{ __('returns.action') }}</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -53,7 +56,7 @@
     $(document).ready(function() {
         fetchTable();
     });
-        
+
     function fetchTable() {
         let table = $('#example1');
         table.DataTable().clear().destroy();
@@ -63,29 +66,33 @@
             pageLength: 25,
             deferRender: true,
             responsive: true,
-            info: false,
-            paging:true,
+            info: true,
+            paging: true,
             autoWidth: false,
-            searching: false,
+            searching: true,
             sScrollX: '100%',
             dom: 'Bfrtip',
             buttons: [],
             stateSave: true,
+            order: [[5, 'desc']],
             ajax: {
-                url: '{{route("get-purchase-order-list")}}', // This route seems incorrect for returns, but keeping original
+                url: '{{ route("get-return-list") }}',
                 type: 'POST',
-                dataType:'json',
-                data:{_token: '{{csrf_token()}}'},
+                dataType: 'json',
+                data: {_token: '{{ csrf_token() }}'},
             },
-            aoColumnDefs:[{bSortable:false,aTargets:[0,6]}],
+            aoColumnDefs: [{bSortable: false, aTargets: [0, 9]}],
             columns: [
-                {data:'sno'},
-                {data:'bill_id'},
-                {data:'customerName'},
-                {data:'date'},
-                {data:'total'},
-                {data:'userName'},
-                {data:'action'},
+                {data: 'sno'},
+                {data: 'bill_id'},
+                {data: 'order_no'},
+                {data: 'customerName'},
+                {data: 'product_name'},
+                {data: 'date'},
+                {data: 'quantity'},
+                {data: 'amount'},
+                {data: 'tax'},
+                {data: 'action'},
             ]
         });
     }

@@ -9,6 +9,8 @@ return [
     'date' => 'Date',
     'discount' => 'Discount',
     'bill_no' => 'Bill No',
+    'order_no' => 'Order No',
+    'action' => 'Action',
     'category' => 'Category',
     'select_category' => 'Select Category',
     'add' => 'Add',

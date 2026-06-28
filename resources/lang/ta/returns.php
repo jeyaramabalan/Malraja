@@ -9,6 +9,8 @@ return [
     'date' => 'தேதி',
     'discount' => 'தள்ளுபடி',
     'bill_no' => 'பில் எண்',
+    'order_no' => 'ஆர்டர் எண்',
+    'action' => 'செயல்',
     'category' => 'வகை',
     'select_category' => 'வகையைத் தேர்ந்தெடுக்கவும்',
     'add' => 'சேர்க்க',

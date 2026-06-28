@@ -135,6 +135,7 @@ Route::middleware('auth:web')->group(function () {
     Route::post('get-category-product',[ProductController::class,'getCategoryProduct'])->name('get-category-product');
     Route::post('get-order-list',[OrdersController::class,'getOrderList'])->name('get-order-list');
     Route::post('get-purchase-order-list',[PurchaseOrdersController::class,'getOrderList'])->name('get-purchase-order-list');
+    Route::post('get-return-list',[ReturnController::class,'getReturnList'])->name('get-return-list');
     Route::post('get-product',[ProductController::class,'getProduct'])->name('get-product');
     Route::post('get-retail-product',[ProductController::class,'getRetailProduct'])->name('get-retail-product');
     Route::post('get-product-list',[ProductController::class,'getProductList'])->name('get-product-list');
