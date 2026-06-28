@@ -16,4 +16,8 @@ yarn-error.log
 /bootstrap/cache/*.php
 !/bootstrap/cache/.gitignore
 /storage/framework/cache/data/*
+.user.ini
+.rnd
+app.zip
+*.sql
 supersalessoft.zip
