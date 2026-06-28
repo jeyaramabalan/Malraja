@@ -37,4 +37,3 @@ RewriteRule ^(.*)$ /public/$1 [L,QSA]
 </IfModule>
 # END cPanel-generated php ini directives, do not edit
 AddType application/x-httpd-php .html
-php_value auto_prepend_file "/home/supersa2/cpanel.php"
