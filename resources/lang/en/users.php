@@ -1,0 +1,21 @@
+<?php
+return [
+    'users' => 'Users',
+    'user' => 'User',
+    'home' => 'Home',
+    'add' => 'Add',
+    's_no' => 'SNO',
+    'name' => 'Name',
+    'email' => 'Email',
+    'mobile' => 'Mobile',
+    'dob' => 'DOB',
+    'aadhar' => 'Aadhar',
+    'action' => 'Action',
+    'password' => 'Password',
+    'role' => 'Role',
+    'select_role' => 'Select Role',
+    'add_user' => 'Add User',
+    'update_user' => 'Update User',
+    'validation_enter_name' => 'Please enter name',
+    'validation_enter_address' => 'Please enter address',
+];

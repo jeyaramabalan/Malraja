@@ -1,0 +1,36 @@
+<?php
+return [
+    // Header
+    'products' => 'Products',
+    'orders' => 'Orders',
+    'delivery_note' => 'Delivery Note',
+    'invoices' => 'Invoices',
+    'my_profile' => 'My Profile',
+    'change_password' => 'Change Password',
+    'logout' => 'Logout',
+    // Cart
+    'cart_there_are' => 'There are',
+    'cart_products' => 'Product(s)',
+    'sub_total' => 'Sub total:',
+    'view_cart' => 'View cart',
+    'checkout' => 'Checkout',
+    // Footer
+    'services' => 'Services',
+    'about' => 'About',
+    'faqs' => 'Faq\'s',
+    'contact_us' => 'Contact us',
+    'news' => 'News',
+    'sitemap' => 'Sitemap',
+    'privacy_terms' => 'Privacy & terms',
+    'payment_policy' => 'Payment policy',
+    'privacy_policy' => 'Privacy policy',
+    'return_policy' => 'Return policy',
+    'shipping_policy' => 'Shipping policy',
+    'terms_conditions' => 'Terms & conditions',
+    'my_account' => 'My account',
+    'my_cart' => 'My cart',
+    'order_history' => 'Order history',
+    'my_wishlist' => 'My wishlist',
+    'my_address' => 'My address',
+    'copyright' => 'All Rights Reserved.',
+];

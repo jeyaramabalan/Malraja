@@ -1,0 +1,20 @@
+<?php
+return [
+    'return_order' => 'Return Order',
+    'returned_orders' => 'Returned Orders',
+    'returned_products' => 'Returned Products',
+    'home' => 'Home',
+    'customer' => 'Customer',
+    'select_customer' => 'Select Customer',
+    'date' => 'Date',
+    'discount' => 'Discount',
+    'bill_no' => 'Bill No',
+    'category' => 'Category',
+    'select_category' => 'Select Category',
+    'add' => 'Add',
+    's_no' => 'SNO',
+    'product_name' => 'Product Name',
+    'quantity' => 'Quantity',
+    'total' => 'Total',
+    'tax' => 'Tax',
+];

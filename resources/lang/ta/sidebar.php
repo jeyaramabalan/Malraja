@@ -1,0 +1,52 @@
+<?php
+
+// Tamil translations for the sidebar and top navigation
+
+return [
+    // Top Navigation
+    'new_order' => 'புதிய ஆர்டர்',
+    'new_pos' => 'புதிய POS',
+    'all_orders' => 'அனைத்து ஆர்டர்கள்',
+    'add_retail' => 'சில்லறை சேர்க்க',
+    'all_retail' => 'அனைத்து சில்லறை',
+    'add_customer' => 'வாடிக்கையாளரைச் சேர்க்க',
+
+    // Main Sidebar
+    'dashboard' => 'டாஷ்போர்டு',
+    'customers' => 'வாடிக்கையாளர்கள்',
+    'products' => 'பொருட்கள்',
+    'users' => 'பயனர்கள்',
+    'masters' => 'மாஸ்டர்ஸ்',
+        'category' => 'வகை',
+        'unit' => 'அலகு',
+        'hsn' => 'HSN',
+        'expense_type' => 'செலவு வகை',
+        'route' => 'வழி',
+    'vendor' => 'விற்பனையாளர்',
+    'retail' => 'சில்லறை',
+        'create_retail' => 'சில்லறை உருவாக்க',
+        'all_retail_orders' => 'அனைத்து சில்லறை ஆர்டர்கள்',
+        'retail_stock' => 'சில்லறை இருப்பு',
+    'orders' => 'ஆர்டர்கள்',
+        'create_pos' => 'POS உருவாக்க',
+        'create_delivery_order' => 'டெலிவரி ஆர்டர் உருவாக்க',
+        'all_order' => 'அனைத்து ஆர்டர்',
+        'confirmed_order' => 'உறுதிப்படுத்தப்பட்ட ஆர்டர்',
+        'pending_delivery' => 'நிலுவையில் உள்ள டெலிவரி',
+        'pending_payment' => 'நிலுவையில் உள்ள கட்டணம்',
+        'completed_orders' => 'முடிந்த ஆர்டர்கள்',
+        'return_orders' => 'திரும்பிய ஆர்டர்கள்',
+    'purchase_order' => 'கொள்முதல் ஆணை',
+    'stock' => 'இருப்பு',
+    'daily_expense' => 'தினசரி செலவு',
+    'collection' => 'சேகரிப்பு',
+    'reports' => 'அறிக்கைகள்',
+        'daily_profit_report' => 'தினசரி லாப அறிக்கை',
+        'stock_report' => 'இருப்பு அறிக்கை',
+        'product_daily_sale_report' => 'தினசரி விற்பனை அறிக்கை',
+        'customer_report' => 'வாடிக்கையாளர் அறிக்கை',
+        'payment_pending_report' => 'கட்டணம் நிலுவை அறிக்கை',
+        'gst_reports' => 'ஜிஎஸ்டி அறிக்கைகள்',
+        'eway_bill' => 'ஈ-வே பில் (தயாரிப்பு)',
+        'e_invoice' => 'ஈ-விலைப்பட்டி (தயாரிப்பு)',
+];

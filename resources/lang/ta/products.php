@@ -1,0 +1,40 @@
+<?php
+return [
+    // List Page
+    'products' => 'பொருட்கள்',
+    'home' => 'முகப்பு',
+    'add' => 'சேர்க்க',
+    'category' => 'வகை',
+    'select_category' => 'வகையைத் தேர்ந்தெடுக்கவும்',
+    'product_name' => 'பொருள் பெயர்',
+    // Table
+    's_no' => 'வ.எண்',
+    'name' => 'பெயர்',
+    'tamil_name' => 'தமிழ் பெயர்',
+    'category_name' => 'வகை பெயர்',
+    'code' => 'குறியீடு',
+    'unit' => 'அலகு',
+    'hsn' => 'HSN',
+    'purchase_rate' => 'கொள்முதல் விலை',
+    'wholesale_rate' => 'மொத்த விற்பனை விலை',
+    'customer_rate' => 'வாடிக்கையாளர் விலை',
+    'action' => 'செயல்',
+    // Add/Edit Page
+    'select_unit' => 'அலகு தேர்ந்தெடுக்கவும்',
+    'select_hsn' => 'HSN தேர்ந்தெடுக்கவும்',
+    'product_code' => 'பொருள் குறியீடு',
+    'product_unit' => 'பொருள் அலகு',
+    'product_hsn' => 'பொருள் HSN',
+    'sgst' => 'SGST',
+    'cgst' => 'CGST',
+    'additional_tax' => 'கூடுதல் வரி',
+    'final_price' => 'இறுதி விலை',
+    'add_product' => 'பொருளைச் சேர்',
+    'update_product' => 'பொருளைப் புதுப்பிக்கவும்',
+    // Validation
+    'validation_enter_name' => 'தயவுசெய்து பெயரை உள்ளிடவும்',
+    'validation_select_category' => 'தயவுசெய்து பொருள் வகையைத் தேர்ந்தெடுக்கவும்',
+    'validation_enter_code' => 'தயவுசெய்து குறியீட்டை உள்ளிடவும்',
+    'validation_enter_purchase_rate' => 'தயவுசெய்து கொள்முதல் விலையை உள்ளிடவும்',
+    'validation_select_unit' => 'தயவுசெய்து அலகைத் தேர்ந்தெடுக்கவும்',
+];

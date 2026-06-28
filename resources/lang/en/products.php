@@ -1,0 +1,40 @@
+<?php
+return [
+    // List Page
+    'products' => 'Products',
+    'home' => 'Home',
+    'add' => 'Add',
+    'category' => 'Category',
+    'select_category' => 'Select Category',
+    'product_name' => 'Product Name',
+    // Table
+    's_no' => 'SNO',
+    'name' => 'Name',
+    'tamil_name' => 'Tamil Name',
+    'category_name' => 'Category Name',
+    'code' => 'Code',
+    'unit' => 'Unit',
+    'hsn' => 'HSN',
+    'purchase_rate' => 'Purchase Rate',
+    'wholesale_rate' => 'Whole Sale Rate',
+    'customer_rate' => 'Customer Rate',
+    'action' => 'Action',
+    // Add/Edit Page
+    'select_unit' => 'Select Unit',
+    'select_hsn' => 'Select HSN',
+    'product_code' => 'Product Code',
+    'product_unit' => 'Product Unit',
+    'product_hsn' => 'Product HSN',
+    'sgst' => 'SGST',
+    'cgst' => 'CGST',
+    'additional_tax' => 'Additional Tax',
+    'final_price' => 'Final Price',
+    'add_product' => 'Add Product',
+    'update_product' => 'Update Product',
+    // Validation
+    'validation_enter_name' => 'Please enter name',
+    'validation_select_category' => 'Please select product category',
+    'validation_enter_code' => 'Please enter code',
+    'validation_enter_purchase_rate' => 'Please enter purchase rate',
+    'validation_select_unit' => 'Please select unit',
+];

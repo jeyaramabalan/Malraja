@@ -1,0 +1,13 @@
+Roles :
+Owner : Full access 1
+Admin : Full access 2
+Accountant : Full access except user creation and profit details 3
+Delivery Executive : 4
+Access only to pending delivery orders. Access only to move status and view bill
+Collection Executive : 5
+Access only to pending payment orders. Access only to move status and view bill
+
+Executive: 6
+
+Collection Executive + Delivery Executive
+

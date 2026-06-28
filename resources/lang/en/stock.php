@@ -1,0 +1,20 @@
+<?php
+return [
+    'stock' => 'Stock',
+    'stocks' => 'Stocks',
+    'home' => 'Home',
+    'add' => 'Add',
+    'category' => 'Category',
+    'select_category' => 'Select Category',
+    'product_name' => 'Product Name',
+    's_no' => 'SNO',
+    'purchase' => 'Purchase',
+    'sale' => 'Sale',
+    'loss' => 'Loss',
+    'free_item_on_sale' => 'Free Item On Sale',
+    'free_item_on_purchase' => 'Free Item On Purchase',
+    'sale_damage' => 'Sale Damage',
+    'purchase_damage' => 'Purchase Damage',
+    'sale_damage_return' => 'Sale Damage Return',
+    'purchase_damage_return' => 'Purchase Damage Return',
+];

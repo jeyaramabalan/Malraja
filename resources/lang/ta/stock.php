@@ -1,0 +1,20 @@
+<?php
+return [
+    'stock' => 'இருப்பு',
+    'stocks' => 'இருப்புகள்',
+    'home' => 'முகப்பு',
+    'add' => 'சேர்க்க',
+    'category' => 'வகை',
+    'select_category' => 'வகையைத் தேர்ந்தெடுக்கவும்',
+    'product_name' => 'பொருள் பெயர்',
+    's_no' => 'வ.எண்',
+    'purchase' => 'கொள்முதல்',
+    'sale' => 'விற்பனை',
+    'loss' => 'இழப்பு',
+    'free_item_on_sale' => 'விற்பனையில் இலவசம்',
+    'free_item_on_purchase' => 'கொள்முதலில் இலவசம்',
+    'sale_damage' => 'விற்பனை சேதம்',
+    'purchase_damage' => 'கொள்முதல் சேதம்',
+    'sale_damage_return' => 'விற்பனை சேதம் திரும்ப',
+    'purchase_damage_return' => 'கொள்முதல் சேதம் திரும்ப',
+];
